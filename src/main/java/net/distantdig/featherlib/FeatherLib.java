@@ -1,5 +1,6 @@
 package net.distantdig.featherlib;
 
+import net.distantdig.featherlib.world.feature.decorators.ModDecorators;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,5 +13,7 @@ public class FeatherLib implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
+
+		ModDecorators.registerDecorators();
 	}
 }
