@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "featherlib",
+  "version": "${version}",
+
+  "name": "FeatherLib",
+  "description": "This is a library for the immersive mod series by Birb Feather Studios!",
+  "authors": [
+    "DistantDig",
+    "Kekie"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/featherlib/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.distantdig.featherlib.FeatherLib"
+    ]
+  },
+  "mixins": [
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.19",
+    "fabric-api": "*",
+    "minecraft": "~1.19.2",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
