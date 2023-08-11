@@ -1,4 +1,4 @@
-package net.distantdig.featherlib.world.feature.trunk_placers;
+package net.distantdig.treelib.world.feature.trunk_placers;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;
@@ -12,7 +12,7 @@ import org.spongepowered.include.com.google.common.collect.ImmutableList;
 import java.util.List;
 import java.util.function.BiConsumer;
 
-public abstract class FeatherLibTrunkPlacer extends net.minecraft.world.gen.trunk.TrunkPlacer {
+public abstract class TreeLibTrunkPlacer extends net.minecraft.world.gen.trunk.TrunkPlacer {
     //Big Branch
     int bigBranchHeight;
     int bigBranchLength;
@@ -56,7 +56,7 @@ public abstract class FeatherLibTrunkPlacer extends net.minecraft.world.gen.trun
     }
      */
 
-    public FeatherLibTrunkPlacer(int baseHeight, int firstRandomHeight, int secondRandomHeight) {
+    public TreeLibTrunkPlacer(int baseHeight, int firstRandomHeight, int secondRandomHeight) {
         super(baseHeight, firstRandomHeight, secondRandomHeight);
     }
 

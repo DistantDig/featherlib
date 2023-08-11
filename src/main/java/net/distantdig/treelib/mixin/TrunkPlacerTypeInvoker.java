@@ -1,4 +1,4 @@
-package net.distantdig.featherlib.mixin;
+package net.distantdig.treelib.mixin;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.world.gen.trunk.TrunkPlacer;

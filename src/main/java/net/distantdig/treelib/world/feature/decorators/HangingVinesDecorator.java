@@ -1,4 +1,4 @@
-package net.distantdig.featherlib.world.feature.decorators;
+package net.distantdig.treelib.world.feature.decorators;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

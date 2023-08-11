@@ -1,12 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.distantdig.featherlib",
+  "package": "net.distantdig.treelib.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "mixin.FoliagePlacerTypeInvoker",
-    "mixin.TreeDecoratorTypeInvoker",
-    "mixin.TrunkPlacerTypeInvoker"
+    "FoliagePlacerTypeInvoker",
+    "TreeDecoratorTypeInvoker",
+    "TrunkPlacerTypeInvoker"
   ],
   "client": [
   ],

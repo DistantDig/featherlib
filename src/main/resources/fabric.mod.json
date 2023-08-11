@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "featherlib",
+  "id": "treelib",
   "version": "${version}",
 
-  "name": "FeatherLib",
+  "name": "TreeLib",
   "description": "This is a library for the immersive mod series by Birb Feather Studios!",
   "authors": [
     "DistantDig",
@@ -11,19 +11,20 @@
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/DistantDig/featherlib"
   },
 
-  "license": "MIT",
-  "icon": "assets/featherlib/icon.png",
+  "license": "All Rights Reserved",
+  "icon": "assets/Treelib/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.distantdig.featherlib.FeatherLib"
+      "net.distantdig.treelib.TreeLib"
     ]
   },
   "mixins": [
+    "treelib.mixins.json"
   ],
 
   "depends": {

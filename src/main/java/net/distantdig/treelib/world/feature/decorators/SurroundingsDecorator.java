@@ -1,4 +1,4 @@
-package net.distantdig.featherlib.world.feature.decorators;
+package net.distantdig.treelib.world.feature.decorators;
 
 import com.google.common.collect.Lists;
 import com.mojang.serialization.Codec;
