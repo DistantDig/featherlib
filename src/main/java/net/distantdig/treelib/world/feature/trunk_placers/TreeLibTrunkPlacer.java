@@ -14,36 +14,36 @@ import java.util.function.BiConsumer;
 
 public abstract class TreeLibTrunkPlacer extends net.minecraft.world.gen.trunk.TrunkPlacer {
     //Big Branch
-    int bigBranchHeight;
-    int bigBranchLength;
-    Direction bigBranchDirection1;
-    Direction bigBranchDirection2;
+    public int bigBranchHeight;
+    public int bigBranchLength;
+    public Direction bigBranchDirection1;
+    public Direction bigBranchDirection2;
 
     //Big Branch 2
-    int bigYBranchHeight;
-    int bigYBranchLength;
-    Direction bigYBranchDirection1;
-    Direction bigYBranchDirection2;
+    public int bigYBranchHeight;
+    public int bigYBranchLength;
+    public Direction bigYBranchDirection1;
+    public Direction bigYBranchDirection2;
 
     //Small Branch
-    int smallBranchLength;
-    int smallBranchOffset;
-    Direction smallBranchDirection1;
-    Direction smallBranchDirection2;
-    boolean alreadyBranched;
+    public int smallBranchLength;
+    public int smallBranchOffset;
+    public Direction smallBranchDirection1;
+    public Direction smallBranchDirection2;
+    public boolean alreadyBranched;
 
     //Small Branch 2
-    int smallYBranchLength;
-    int smallYBranchHeightOffset;
-    int smallYBranchLengthOffset;
-    Direction smallYBranchDirection1;
-    Direction smallYBranchDirection2;
+    public int smallYBranchLength;
+    public int smallYBranchHeightOffset;
+    public int smallYBranchLengthOffset;
+    public Direction smallYBranchDirection1;
+    public Direction smallYBranchDirection2;
 
     //Y Branch
-    int yBranchHeight;
-    int yBranchLength;
-    Direction yBranchDirection1;
-    Direction yBranchDirection2;
+    public int yBranchHeight;
+    public int yBranchLength;
+    public Direction yBranchDirection1;
+    public Direction yBranchDirection2;
 
 
 
