@@ -15,7 +15,7 @@
   },
 
   "license": "All Rights Reserved",
-  "icon": "assets/Treelib/icon.png",
+  "icon": "assets/treelib/treelib_icon.png",
 
   "environment": "*",
   "entrypoints": {
