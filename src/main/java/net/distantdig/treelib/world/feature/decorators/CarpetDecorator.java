@@ -5,11 +5,11 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.tag.BlockTags;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
 import net.minecraft.world.TestableWorld;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.TreeFeature;
@@ -20,7 +20,7 @@ import static net.minecraft.block.SnowBlock.LAYERS;
 
 public class CarpetDecorator extends TreeDecorator {
     public static final Codec<CarpetDecorator> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-            Registry.BLOCK.getCodec().fieldOf("block").forGetter(CarpetDecorator::getBlock)
+            Registries.BLOCK.getCodec().fieldOf("block").forGetter(CarpetDecorator::getBlock)
     ).apply(instance, CarpetDecorator::new));
 
     public final Block block;
@@ -70,7 +70,7 @@ public class CarpetDecorator extends TreeDecorator {
     }
 
     public static boolean isReplaceablePlant(BlockState state) {
-        return state.isIn(BlockTags.REPLACEABLE_PLANTS);
+        return state.isIn(BlockTags.REPLACEABLE_BY_TREES);
     }
 
     public static boolean isReplaceablePlant(TestableWorld world, BlockPos pos) {
