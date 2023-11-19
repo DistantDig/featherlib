@@ -4,15 +4,15 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.block.Block;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.gen.treedecorator.TreeDecorator;
 import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
 
 public class LogReplacerDecorator extends TreeDecorator {
     public static final Codec<LogReplacerDecorator> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-            Registry.BLOCK.getCodec().fieldOf("block").forGetter(LogReplacerDecorator::getBlock)
+            Registries.BLOCK.getCodec().fieldOf("block").forGetter(LogReplacerDecorator::getBlock)
     ).apply(instance, LogReplacerDecorator::new));
 
     public final Block block;

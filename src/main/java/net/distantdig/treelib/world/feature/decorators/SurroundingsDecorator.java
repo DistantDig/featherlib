@@ -8,9 +8,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.TallPlantBlock;
 import net.minecraft.block.enums.DoubleBlockHalf;
-import net.minecraft.tag.BlockTags;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
 import net.minecraft.world.TestableWorld;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.treedecorator.TreeDecorator;
@@ -20,14 +20,14 @@ import java.util.ArrayList;
 
 public class SurroundingsDecorator extends TreeDecorator {
     public static final Codec<SurroundingsDecorator> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-            Registry.BLOCK.getCodec().fieldOf("innerBlock").forGetter(SurroundingsDecorator::getInnterBlock),
-            Registry.BLOCK.getCodec().fieldOf("outerBlock").forGetter(SurroundingsDecorator::getOuterBlock),
+            Registries.BLOCK.getCodec().fieldOf("innerBlock").forGetter(SurroundingsDecorator::getInnterBlock),
+            Registries.BLOCK.getCodec().fieldOf("outerBlock").forGetter(SurroundingsDecorator::getOuterBlock),
 
-            Registry.BLOCK.getCodec().fieldOf("foliage1").forGetter(SurroundingsDecorator::getFoliage1),
-            Registry.BLOCK.getCodec().fieldOf("foliage2").forGetter(SurroundingsDecorator::getFoliage2),
-            Registry.BLOCK.getCodec().fieldOf("foliage3").forGetter(SurroundingsDecorator::getFoliage3),
-            Registry.BLOCK.getCodec().fieldOf("foliage4").forGetter(SurroundingsDecorator::getFoliage4),
-            Registry.BLOCK.getCodec().fieldOf("foliage5").forGetter(SurroundingsDecorator::getFoliage5)
+            Registries.BLOCK.getCodec().fieldOf("foliage1").forGetter(SurroundingsDecorator::getFoliage1),
+            Registries.BLOCK.getCodec().fieldOf("foliage2").forGetter(SurroundingsDecorator::getFoliage2),
+            Registries.BLOCK.getCodec().fieldOf("foliage3").forGetter(SurroundingsDecorator::getFoliage3),
+            Registries.BLOCK.getCodec().fieldOf("foliage4").forGetter(SurroundingsDecorator::getFoliage4),
+            Registries.BLOCK.getCodec().fieldOf("foliage5").forGetter(SurroundingsDecorator::getFoliage5)
     ).apply(instance, SurroundingsDecorator::new));
 
     public final Block groundInnerBlock;

@@ -5,7 +5,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.Registries;
 import net.minecraft.world.gen.treedecorator.TreeDecorator;
 import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
 
@@ -14,8 +14,9 @@ import java.util.List;
 public class HangingVinesDecorator extends TreeDecorator {
     public static final float PROBABILITY = 0.2f;
     public static final Codec<HangingVinesDecorator> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-            Registry.BLOCK.getCodec().fieldOf("leafBlock").forGetter(HangingVinesDecorator::getLeafBlock),
-            Registry.BLOCK.getCodec().fieldOf("plantBlock").forGetter(HangingVinesDecorator::getPlantBlock)
+            Registries.BLOCK.getCodec().fieldOf("leafBlock").forGetter(HangingVinesDecorator::getLeafBlock),
+            Registries.BLOCK.getCodec().fieldOf("plantBlock").forGetter(HangingVinesDecorator::getPlantBlock)
+
     ).apply(instance, HangingVinesDecorator::new));
     public static final List<Direction> ACCEPTABLE_POS = List.of(Direction.NORTH, Direction.SOUTH, Direction.EAST, Direction.WEST);
 
